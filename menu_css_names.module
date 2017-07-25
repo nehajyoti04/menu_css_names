@@ -39,6 +39,10 @@ function menu_css_names_preprocess_menu_local_task(&$variables) {
   $title = $variables['element']['#link']['title'];
   $variables['attributes']['class'][] =  _make_class_name($title);
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for menu_local_action templates.
+ */
 function menu_css_names_preprocess_menu_local_action(&$variables) {
   $title = $variables['element']['#link']['title'];
   $variables['attributes']['class'][] =  _make_class_name($title);
