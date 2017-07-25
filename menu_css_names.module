@@ -52,10 +52,10 @@ function menu_css_names_preprocess_menu_local_action(&$variables) {
  * out.
  */
 function _make_class_name($text) {
-	// Do main text conversion to class name,
-	// then remove double hyphens or hyphens at beginning or end of class name
-	$text = Unicode::strtolower(preg_replace('/(\s?&amp;\s?|[^-_\w\d])/i', '-', trim(strip_tags($text))));
-	$text = preg_replace('/(^-+|-+$)/', '', $text);
-	$text = preg_replace('/--+/', '-', $text);
-	return $text;
+  // Do main text conversion to class name,
+  // then remove double hyphens or hyphens at beginning or end of class name
+  $text = Unicode::strtolower(preg_replace('/(\s?&amp;\s?|[^-_\w\d])/i', '-', trim(strip_tags($text))));
+  $text = preg_replace('/(^-+|-+$)/', '', $text);
+  $text = preg_replace('/--+/', '-', $text);
+  return $text;
 }
